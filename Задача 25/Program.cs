@@ -11,10 +11,14 @@ int b = Convert.ToInt32 (Console.ReadLine());
 int Method4(int a, int b)
 {
 // int result = a ^ b;
-int result = Convert.ToInt32(Math.Pow(a, b));
+int result = a;
+for (int i = 1; i < b; i++)
+{
+    result = result * a; 
+}
 return result;
 }
 
 int res = Method4 (a, b);
-Console.WriteLine(res);
+Console.WriteLine("число a в степени b равно " +res);
 Console.WriteLine(" ");
